@@ -13,7 +13,7 @@ function randFace() {
 let funds = 50; // funds will change as game is played
 let round = 0;
 
-while (funds > 1 && funds < 100) {
+while (funds > 0 && funds < 100) {
   round++;
   console.log(`round ${round}:`);
   console.log(`\tstarting funds: ${funds}p`);
@@ -42,7 +42,7 @@ while (funds > 1 && funds < 100) {
   }
   funds = funds - totalBet;
   console.log('\tbets: ' +
-    Object.keys(bets).map(face => `${face}: ${bets[face]} pence`).join(', ') + 
+    Object.keys(bets).map(face => `${face}: ${bets[face]} pence`).join(', ') +
     ` (total: ${totalBet} pence)`);
 
   // roll die
